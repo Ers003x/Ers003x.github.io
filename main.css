@@ -307,9 +307,7 @@ footer .foot-block {
 
 
 @media screen and (max-width: 1050px) {
-	body {
-		background: red;
-	}
+	
 
 	.web-section {
 		width: 100%;
