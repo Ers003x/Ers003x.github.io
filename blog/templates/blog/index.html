@@ -1,0 +1,29 @@
+
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="entry-title">
+	<h1>{{ hyrje.title }}</h1>
+</div>
+
+<div class="slider-section">
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	    	{% for slide in slider %}
+		      <div class="swiper-slide"><img src="{{ slide.slide.url }}"></div>
+	    	
+		    {% endfor %}  
+	 	</div>
+	    	
+	</div>
+</div>	
+<br><br>
+<div class="entry-description">
+	<p> {{ hyrje.description }} </p>
+</div>
+
+
+
+{% endblock %}
+

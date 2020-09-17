@@ -1,0 +1,58 @@
+{% extends 'blog/base.html' %}
+
+
+
+
+{% block content %}
+
+<div class="trainer-content">
+<div class="up-post">
+	<h1>{{ trainer }}</h1> 
+</div>
+
+<div class="trainer-post">
+
+<div class="trainer-left">
+
+<p>{{ trainer.description }}</p>
+</div>
+<div class="trainer-right">
+<div class="trainer-photo">
+	
+<img src="{{ trainer.profile.url }}">
+</div>
+<div class="trainer-teams">
+	<div class="renditje-team">
+		<h1>Merret me pergatitjen e: <br>
+			{% for ekip in trainer.profesor.all %}
+	<a href="{% url 'ekipi' ekip.category.mbarim %}">{{ ekip.category }},<br> </a>
+
+	{% endfor %}
+	</h1>
+	</div>
+
+</div>
+
+</div>
+	
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</div>
+
+
+{% endblock %}

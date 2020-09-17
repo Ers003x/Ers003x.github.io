@@ -1,0 +1,81 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="post-list">
+<div class="post-container">
+	{% for post in posts %}
+		
+			
+
+
+<div class="box">
+	<div class="content">
+		<div class="content-photo">
+			 <img src="{{ post.image.url }}"/> 
+		</div>
+		<div class="content-title">
+			<a href="{% url 'post-detail' post.id %}"><h1>{{ post.title }} </h1> </a>
+		</div>
+		<div class="content-bottom">
+			
+				<a href="{% url 'by-category' post.category %}"><h1>{{ post.category }}</h1></a> 
+
+				<p>{{ post.date_posted|date:"F d, Y" }}</p>	
+			
+				
+			
+			
+			
+		</div>
+			
+	</div>
+</div>
+
+
+
+
+
+
+			
+					
+
+
+		
+				
+				
+
+		
+			
+
+
+
+		
+				
+		
+			
+					
+					
+											
+					
+				
+					
+				
+				
+							
+					
+
+	
+		
+
+	
+	{% endfor %}
+	</div>
+</div>
+	
+
+{% endblock %}
+
+
+

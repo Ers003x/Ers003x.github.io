@@ -1,0 +1,52 @@
+{% load static %}
+<header>
+	<div class="web-intro">
+		<img src="{% static 'invaders.png' %}">
+			
+		<div class="headers">
+
+			<h1>INVADERS</h1>
+			<a href=""><h2>Akademi Basketbolli - Tiranë, Albania</h2></a>
+		</div>
+	</div>
+	<nav>
+		<ul>
+			<li><a href="{% url 'index' %}">Home</a></li>
+			<li><a href="{% url 'news' %}">Daily News</a></li>
+			<li class="dropdown-css">
+	            <a href="javascript:void(0)" class="dropbtn-css">Rreth Nesh</a>
+	            <div class="dropdown-content-css">
+		              <a href="">Historiku</a>
+		              <a href="#">Trofete</a>
+		              <a href="{% url 'kushtet'%}">Kushtet dhe Rregulla</a>	            </div>          
+       	   </li>
+			<li class="dropdown-css">
+	            <a href="javascript:void(0)" class="dropbtn-css">Teams</a>
+	            <div class="dropdown-content-css">
+		             {% for moshe in grupmoshat %}
+		             <a href="{% url 'ekipi' moshe.mbarim %}">{{ moshe }}</a>
+		             {% endfor %}
+	            </div>          
+       	   </li>
+			  <li class="dropdown-css">
+	            <a href="javascript:void(0)" class="dropbtn-css">Evente dhe Organizime</a>
+	            <div class="dropdown-content-css">
+		             {% for event in kategori %}
+		             <a href="{% url 'by-category' event.type %}">{{ event }}</a>
+		             {% endfor %}
+	            </div>          
+       	   </li>
+			
+			  <li class="dropdown-css">
+	            <a href="javascript:void(0)" class="dropbtn-css">Trainers
+	        </a>
+	            <div class="dropdown-content-css">
+		             {% for t in trajner %}
+		             <a href="{% url 'trainer' t.first %}">{{ t.first }} {{ t.last }}</a>
+		             {% endfor %}
+	            </div>          
+       	   </li>
+			<li><a href="{% url 'contact' %}">Contact</a></li>
+		</ul>
+	</nav>
+</header>
