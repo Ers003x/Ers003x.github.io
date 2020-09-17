@@ -1,0 +1,382 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+@font-face {
+	src: url(fonts/TisaSansPro-ExtraLight.woff2);
+  	font-family: Tisa;
+}
+
+
+@keyframes WebFade {
+	from {
+		opacity: 0.2;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+
+@keyframes TextFade {
+	from {
+		opacity: 0.1;
+	}
+	to {
+		opacity: 0.9;
+	}
+}
+
+
+
+body {
+	background: silver;
+	font-family: 'Montserrat', sans-serif;
+
+	animation: WebFade 1s;
+}
+
+
+.web-section {
+	width: 1500px;
+	background: white;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+header {
+	width: 100%;
+	background: white;
+	height: 200px;
+	position: relative;
+
+}
+
+
+
+
+
+.web-intro {
+	margin: 0 auto;
+	
+	
+	align-items: center;
+	text-align: center;
+	
+	
+}
+
+.web-intro .headers {
+	padding-top: 40px;
+}
+
+
+.web-intro h1 {
+	font-family: helvetica;
+	letter-spacing: 1px;
+	color: #444;
+}
+
+.web-intro h2 {
+	padding-top: 5px; 
+	text-transform: uppercase;
+	font-family: helvetica;
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-weight: 400;
+	color: #888;
+	opacity: 0.4;
+}
+
+.web-intro h2:hover {
+	opacity: 1;
+	color: #666;
+	transition: 0.6s ease;
+	text-decoration: none;
+
+}
+
+
+
+
+header img {
+
+	width: 150px;
+	position: absolute;
+	right: 0;
+}
+
+
+nav {
+	position: absolute;	
+	bottom: 0;
+	height: 40px;
+	width: 100%;
+	background:#06D5A0;
+}
+
+
+
+nav ul {
+	float: right;
+
+}
+
+nav ul li {
+	display: inline-flex;
+	width: auto;
+}
+
+
+nav ul li a {
+	font-size: 15px;
+	line-height: 1.5em;
+	letter-spacing: 1px;
+	color: #333;
+	padding: 9px;
+	font-weight: 600;
+
+}
+
+
+ul li a:hover {
+	text-decoration: none;
+	color: white;	
+	background: black;
+	transition: 0.3s ease-in-out;
+	border-radius: 3px;
+}
+
+
+
+.personal-info {
+	background: black;
+	height: auto;
+	min-height: 500px;
+	position: relative;
+	color: white;
+	display: inline-flex;
+}
+
+
+.text-section {
+	width: 50%;
+	height: auto;
+	margin: 40px;
+	
+	
+}
+
+
+.text-title {
+	margin-top: 70px;
+	text-align: left;
+	margin-left: 100px;
+	font-family: 'Karma', serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: orange;
+}
+
+.text-content {
+	width: 90%;
+	margin-top: 10px;
+	margin-left: 100px;
+	color: white;
+	font-size: 17px;
+	line-height: 1.5em;
+	font-weight: 400;
+	letter-spacing: 1px;
+	
+
+}
+
+.photo-section {
+	position: relative;
+	width: 50%;
+	height: auto;
+}
+
+
+.photo-section img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	height: 250px;
+	-webkit-box-reflect: below 1px  linear-gradient(transparent, transparent, #0006);
+}
+
+
+
+
+
+.work-display {
+	width: 100%;
+	min-height: 500px;
+	background: #83ECD0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+
+	
+	
+	background: #444;
+	height: 250px;
+	width: 100%;
+
+}
+
+
+footer .foot-block {
+	margin: 0 auto;
+	height: 100%;
+	width: 300px;
+	position: relative;
+}	
+
+
+.referencat {
+	
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translate(-50%, -50%);
+	display: inline-flex;
+}
+
+
+
+
+.referencat .fotot img {
+	max-width: 50px;
+	margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1050px) {
+	body {
+		background: red;
+	}
+
+	.web-section {
+		width: 100%;
+	}
+
+	.personal-info {
+		background: black;
+		height: auto;
+		min-height: 950px;
+		position: relative;
+		color: white;
+		display: block;
+}
+
+
+	.text-section {
+		width: 100%;
+		height: auto;
+		margin: 0;
+	
+		
+	}
+
+
+	.text-title {
+		margin-top: auto;
+		padding-top: 90px; 
+		text-align: center;
+		margin-left: auto;
+		font-family: 'Karma', serif;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color: orange;
+	}
+
+	.text-content {
+		width: 60%;
+		margin: 0 auto;
+		color: white;
+		font-size: 17px;
+		line-height: 1.5em;
+		font-weight: 400;
+		letter-spacing: 1px;
+		
+
+	}
+
+	.photo-section {
+		position: absolute;
+		background: red;
+		width: 100%;
+		margin-top: 50px
+		height: auto;
+		bottom: 0;
+	}
+
+
+	.photo-section img {
+		bottom: 0;
+		position: relative;
+		transform: translate(0,0;)
+		height: 250px;
+		-webkit-box-reflect: below 1px  linear-gradient(transparent, transparent, #0006);
+	}
+
+
+
+}
+
+
